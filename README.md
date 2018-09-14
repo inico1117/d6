@@ -102,3 +102,16 @@ for t in range(4):
     draw.text((60*t+10,10),rndChar(),font=font,fill=rndColor2())
 image=image.filter(ImageFilter.BLUR)
 image.save('code.jpg','jpeg')
+
+#requests
+import requests
+r=requests.get('http://www.douban.com/')
+r.status_code
+r.text
+
+#chardet
+import chardet
+chardet.detect(b'Hello,world!')
+
+data = '离离原上草，一岁一枯荣'.encode('gbk')
+chardet.detect(data)
